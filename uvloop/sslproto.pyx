@@ -609,7 +609,7 @@ cdef class SSLProtocol:
             self._do_read_into_void(context)
             self._do_write()
             self._process_outgoing()
-            self._control_ssl_reading()
+            # self._control_ssl_reading()
         except Exception as ex:
             self._on_shutdown_complete(ex)
         else:
